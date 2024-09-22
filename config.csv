@@ -1,0 +1,7 @@
+Interface;Description;Vlan;Switchport type;Vendor;Default interface;Switchport command;Initialize vlans
+G1/0/1;PC;30;access;cisco;;y;
+G1/0/2;Server-1;300-302,303;trunk;cisco;;y;y
+Te1/10;iLO;59;access;dell;y;;
+Te1/11;Server-2;500-503;trunk;dell;y;;
+0/20;Phone;60;access;quanta;;;
+0/21;Server-3;40-43,200;trunk;quanta;;;

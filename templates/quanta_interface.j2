@@ -1,0 +1,15 @@
+! Generated configuration for interface {{ interface }}
+interface {{ interface }}
+    {% if description != "" -%}
+    description "{{ description }}"
+    {% endif -%}
+    {% if switchport_type == "access" -%}
+    switchport mode access
+    switchport access vlan {{ vlan }}
+    {% else -%}
+    no switchport mode access
+    switchport allowed vlan add {{ vlan }}
+    switchport tagging {{ vlan }}
+    {% endif -%}
+    no shutdown
+    exit

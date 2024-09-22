@@ -1,0 +1,13 @@
+! Generated configuration for interface {{ interface }}
+{% if default_interface == "y" -%}
+default interface {{ interface }}
+{% endif -%}
+interface {{ interface }}
+    {% if description != "" -%}
+    description "{{ description }}"
+    {% endif -%}
+    {% if switchport_command == "y" -%}
+    switchport
+    {% endif -%}
+    no shutdown
+    exit

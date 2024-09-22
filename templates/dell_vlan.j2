@@ -1,0 +1,8 @@
+! Generated configuration for vlan {{ vlan }}
+interface vlan {{ vlan }}
+    {% if switchport_type == "access" -%}
+    untagged {{ interface }}
+    {% else -%}
+    tagged {{ interface }}
+    {% endif -%}
+    exit

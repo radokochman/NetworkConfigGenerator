@@ -1,0 +1,20 @@
+! Generated configuration for interface {{ interface }}
+{% if default_interface == "y" -%}
+default interface {{ interface }}
+{% endif -%}
+interface {{ interface }}
+    {% if description != "" -%}
+    description "{{ description }}"
+    {% endif -%}
+    {% if switchport_command == "y" -%}
+    switchport
+    {% endif -%}
+    {% if switchport_type == "access" -%}
+    switchport mode access
+    switchport access vlan {{ vlan }}
+    {% else -%}
+    switchport mode trunk
+    switchport trunk allowed vlan {{ vlan }}
+    {% endif -%}
+    no shutdown
+    exit

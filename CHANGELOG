@@ -1,0 +1,13 @@
+[1.2] - 02.04.2020
+Added:
+    - Initialize vlan columnt in the CSV file
+    - splitted quanta and cisco templates into interface and vlan files
+
+[1.1] - 01.04.2020
+Changed:
+    - separator from , to ; in the config.csv file
+    - error handling while importing jinja2 library
+    - returning set from split_vlans function to avoid duplicates
+
+[1.0] - 29.03.2020
+Published version 1.0
